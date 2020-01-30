@@ -400,8 +400,17 @@ a {
       color: #ffffff;
       width: 150px;
       height: 40px;
+      font-size: 14px;
+      font-family: "Montserrat";
+      color: #ffffff;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-align: center;
   }
 
+
+  
   .Rectangle_26 {
 
     z-index: 6;

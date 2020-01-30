@@ -1,0 +1,426 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+    color: #95e1d3;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #95e1d3;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+    margin-bottom: 110px;
+}
+
+
+.logo a {
+    display: block;
+    font-size: 30px;
+    font-family: "Montserrat";
+    color: #95e1d3;
+    font-weight: 700;
+}
+
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 12px;
+}
+
+
+
+
+.menu-list {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 490px;
+    list-style: none;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.menu-link {
+    display: block;
+    text-decoration: none;
+}
+
+.menu-link:hover {
+    color: #f38181;
+}
+
+.menu-link::after {
+    content: '';
+    display: block;
+    margin-top: 12px;
+    width: 0;
+    height: 3px;
+    background: #f38181;
+    transition: width .3s;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+
+
+/* MAIN */
+/* SERVICES-SECTION */
+.services {
+    margin-bottom: 84px;
+}
+
+.section-titles {
+    text-align: center;
+}
+
+.first-title {
+    margin-bottom: 58px;
+}
+
+.section-titles::after {
+    display: block;
+    margin: 26px auto;
+    content: "";
+    background-color: #f38181;
+    width: 60px;
+    height: 3px;
+}
+
+
+.section-title {
+    font-size: 30px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.section-titles p {
+    font-size: 24px;
+    font-family: 'Kaushan Script', cursive;
+    color: #333333;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+
+.services-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.services-list-item {
+    display: flex;
+    justify-content: space-around;
+    width: 382px;
+}
+
+.services-list-item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.item {
+    width: 300px;
+}
+
+.services-list-title {
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: #333333;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.services-list-content {
+    font-size: 15px;
+    font-family: "Roboto";
+    color: #999999;
+    line-height: 1.6;
+}
+
+/* SPRITES */
+
+.icon::before {
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+}
+
+.alarm::before {
+    background-image: url(../img/ALARM.png);
+}
+
+.diagram::before {
+    background-image: url(../img/diagram.png);
+}
+
+.comp::before {
+    background-image: url(../img/comp.png);
+}
+
+.book::before {
+    background-image: url(../img/book.png);
+}
+
+.home::before {
+    background-image: url(../img/maison.png);
+}
+
+.digital::before {
+    background-image: url(../img/digital.png);
+}
+
+/* TEAM SECTION */
+
+.second-title {
+    margin-bottom: 42px;
+}
+
+.team-text {
+    padding: 0 110px;
+    font-size: 15px;
+    font-family: "Roboto";
+    color: #999999;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 82px;
+}
+
+/* TEAM CARDS */
+
+.team-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-list-item {
+    background-color: #95e1d3;
+    color: black;
+    width: 380px;
+    height: 470px;
+}
+
+
+.image-container img {
+    display: block;
+    object-fit: cover;
+}
+
+.image-container {
+    position: relative;
+    transition: transform .2s linear;
+}
+
+.image-container::before {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(90deg, #fce38a 0%, rgb(243, 129, 129) 100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 380px;
+    height: 470px;
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+
+.image-container:hover::before{
+    opacity: 0.72;
+}
+
+
+.image-container:hover {
+    transform: translate(-10px, -10px);
+}
+
+/* SOCIALS */
+
+.socials {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    height: 56px;
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+
+.image-container:hover .socials{
+    opacity: 1;
+}
+
+
+.socials-item{
+    background-color: #fce38a;
+}
+
+.socials-item:hover{
+    background: #95e1d3;
+}
+
+.socials-item{
+    display: block;
+}
+
+.socials-item::before{
+    display: block;
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 56px;
+    width: 56px;
+}
+
+.facebook::before{
+    background-image: url(../img/facebook.png);
+}
+
+.twitter::before{
+    background-image: url(../img/twitter.png);
+}
+
+.pinterest::before{
+    background-image: url(../img/pinterest.png);
+}
+
+.instagram::before{
+    background-image: url(../img/instagram.png);
+}
+
+/* TEAM INFO */
+
+.team-info{
+    padding: 27px 80px;
+}
+
+.team-name{
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: #333333;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.profession{
+    font-size: 15px;
+    font-family: "Roboto";
+    color: #999999;
+    font-style: italic;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* FOOTER */
+.footer{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-top: 1px solid #e5e5e5;
+    padding: 12px 0;
+}
+
+.credit {
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: #333333;
+    line-height: 1.2;
+    padding: 22px 0;
+  }
+
+  .credit a{
+      display: inline-block;
+      color: #f38181;
+  }
+/* FORM */
+  .my-form{
+      display: flex;
+  }
+  
+
+  input[type=text]{
+      box-sizing: border-box;
+      display: block;
+      border: 1px solid #e7e7e7;
+      border-right: 0;
+      width: 234px;
+      height: 40px;
+      padding-left: 12px;
+      font-size: 15px;
+      font-family: "Roboto";
+      color: #333333;
+      font-style: italic;
+      line-height: 1.6;
+      outline: none;
+  }
+
+  input[type=text]::placeholder{
+    color: #cccccc;
+    font-style: italic;
+    line-height: 1.6;
+    outline: none;
+  }
+
+  input[type=submit]{
+      display: block;
+      border: none;
+      background-color: #95e1d3;
+      color: #ffffff;
+      width: 150px;
+      height: 40px;
+  }
+
+  .Rectangle_26 {
+
+    z-index: 6;
+  }
+  
+/* MEDIA QUERIES */
+
+@media (min-width: 1140px) {
+    .team-list {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+}
+
+
+@media (min-width: 1146px) {
+    .services-list-item:not(:nth-last-child(-n+3)) {
+        margin-bottom: 92px;
+    }
+}

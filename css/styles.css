@@ -1,5 +1,10 @@
-body {
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
+}
+
+body {
     font-size: 32px;
     font-family: 'Montserrat', sans-serif;
     color: #95e1d3;
@@ -19,7 +24,7 @@ a {
 /* HEADER */
 
 .header {
-    padding-bottom: 110px;
+    padding: 12px 0 110px 0;
 }
 
 
@@ -36,7 +41,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding-top: 12px;
 }
 
 
@@ -70,7 +74,6 @@ a {
 .menu-link::after {
     content: '';
     display: block;
-    margin-top: 12px;
     width: 0;
     height: 3px;
     background: #f38181;
@@ -100,7 +103,7 @@ a {
 
 .section-titles::after {
     display: block;
-    margin: 26px auto;
+    margin: 26px auto 0 auto;
     content: "";
     background-color: #f38181;
     width: 60px;
@@ -123,6 +126,7 @@ a {
     color: #333333;
     line-height: 1.2;
     margin-bottom: 16px;
+    text-transform: none;
 }
 
 
@@ -140,6 +144,7 @@ a {
     display: flex;
     justify-content: space-around;
     width: 382px;
+    padding-left: 82px;
 }
 
 .services-list-title {
@@ -163,37 +168,32 @@ a {
 
 /* SPRITES */
 
-.icon::before {
-    content: "";
-    display: block;
-    padding: 0 26px;
+.icon {
     background-repeat: no-repeat;
-    background-position: center;
-    width: 32px;
-    height: 32px;
+    background-position: left 20px top;
 }
 
-.alarm::before {
+.alarm {
     background-image: url(../img/ALARM.png);
 }
 
-.diagram::before {
+.diagram {
     background-image: url(../img/diagram.png);
 }
 
-.comp::before {
+.comp {
     background-image: url(../img/comp.png);
 }
 
-.book::before {
+.book {
     background-image: url(../img/book.png);
 }
 
-.home::before {
+.home {
     background-image: url(../img/maison.png);
 }
 
-.digital::before {
+.digital {
     background-image: url(../img/digital.png);
 }
 
@@ -271,6 +271,7 @@ a {
 /* SOCIALS */
 
 .socials {
+    padding: 0;
     position: absolute;
     display: flex;
     top: 50%;
@@ -361,7 +362,6 @@ a {
     font-family: "Montserrat";
     color: #333333;
     line-height: 1.2;
-    padding: 22px 0;
   }
 
   .credit a{

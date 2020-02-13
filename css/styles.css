@@ -78,6 +78,7 @@ a {
     height: 3px;
     background: #f38181;
     transition: width .3s;
+    margin-top: 12px;
 }
 
 .menu-link:hover::after {
@@ -353,7 +354,6 @@ a {
 
 /* FOOTER */
 .footer{
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
